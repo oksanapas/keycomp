@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competence Framework Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .color-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .color-option {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid transparent;
+        }
+        .color-option.selected {
+            border-color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .framework {
+            flex: 1;
+            max-width: 24%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .framework h2 {
+            color: #4CAF50;
+            font-size: 18px;
+            text-align: center;
+        }
+        .competences {
+            margin-top: 10px;
+        }
+        .competences ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .competences li {
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .competences li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Competence Framework Showcase</h1>
+
+ <div class="color-selector">
+    <span>Select highlight color:</span>
+    <div class="color-option" style="background-color: #d3e4cd;" onclick="selectColor('#d3e4cd')" title="Green"></div>
+    <div class="color-option" style="background-color: #ffebcd;" onclick="selectColor('#ffebcd')" title="Beige"></div>
+    <div class="color-option" style="background-color: #add8e6;" onclick="selectColor('#add8e6')" title="Light Blue"></div>
+    <div class="color-option" style="background-color: #ffc0cb;" onclick="selectColor('#ffc0cb')" title="Pink"></div>
+    <div class="color-option" style="background-color: #e6e6fa;" onclick="selectColor('#e6e6fa')" title="Lavender"></div>
+    <div class="color-option" style="background-color: #ffd786;" onclick="selectColor('#ffd786')" title="Light Yellow"></div>
+    <div class="color-option" style="background-color: #f0b79c;" onclick="selectColor('#f0b79c')" title="Light Coral"></div>
+    <button onclick="resetHighlights()" style="margin-left: 15px; padding: 5px 10px; cursor: pointer;">Refresh</button>
+</div>
+
+
+    <div class="container">
+        <div class="framework">
+            <h2>Digicomp</h2>
+            <div class="competences">
+                <ul>
+                    <li onclick="highlightCompetence(this)">Searching information and digital content</li>
+                    <li onclick="highlightCompetence(this)">Evaluating digital content</li>
+                    <li onclick="highlightCompetence(this)">Managing digital content</li>
+                    <li onclick="highlightCompetence(this)">Interacting through digital technologies</li>
+                    <li onclick="highlightCompetence(this)">Sharing through digital technologies</li>
+                    <li onclick="highlightCompetence(this)">Engaging in citizenship digitally</li>
+                    <li onclick="highlightCompetence(this)">Collaborating digitally</li>
+                    <li onclick="highlightCompetence(this)">Netiquette</li>
+                    <li onclick="highlightCompetence(this)">Managing digital identity</li>
+                    <li onclick="highlightCompetence(this)">Developing digital content</li>
+                    <li onclick="highlightCompetence(this)">Re-elaborating digital content</li>
+                    <li onclick="highlightCompetence(this)">Copyright and licences</li>
+                    <li onclick="highlightCompetence(this)">Programming</li>
+                    <li onclick="highlightCompetence(this)">Protecting devices</li>
+                    <li onclick="highlightCompetence(this)">Protecting personal data</li>
+                    <li onclick="highlightCompetence(this)">Protecting health and well-being</li>
+                    <li onclick="highlightCompetence(this)">Protecting the environment</li>
+                    <li onclick="highlightCompetence(this)">Solving technical problems</li>
+                    <li onclick="highlightCompetence(this)">Identifying needs and technological responses</li>
+                    <li onclick="highlightCompetence(this)">Creatively using digital technologies</li>
+                    <li onclick="highlightCompetence(this)">Identifying digital competence gaps</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="framework">
+            <h2>Entrecomp</h2>
+            <div class="competences">
+                <ul>
+                    <li onclick="highlightCompetence(this)">Spotting opportunities</li>
+                    <li onclick="highlightCompetence(this)">Creativity</li>
+                    <li onclick="highlightCompetence(this)">Vision</li>
+                    <li onclick="highlightCompetence(this)">Valuing ideas</li>
+                    <li onclick="highlightCompetence(this)">Ethical and sustainable thinking</li>
+                    <li onclick="highlightCompetence(this)">Self-awareness and self-efficacy</li>
+                    <li onclick="highlightCompetence(this)">Motivation and perseverance</li>
+                    <li onclick="highlightCompetence(this)">Mobilising resources</li>
+                    <li onclick="highlightCompetence(this)">Financial and economic literacy</li>
+                    <li onclick="highlightCompetence(this)">Mobilising others</li>
+                    <li onclick="highlightCompetence(this)">Taking the initiative</li>
+                    <li onclick="highlightCompetence(this)">Planning and management</li>
+                    <li onclick="highlightCompetence(this)">Coping with uncertainty, ambiguity and risk</li>
+                    <li onclick="highlightCompetence(this)">Working with others</li>
+                    <li onclick="highlightCompetence(this)">Learning through experience</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="framework">
+            <h2>Greencomp</h2>
+            <div class="competences">
+                <ul>
+                    <li onclick="highlightCompetence(this)">Valuing sustainability</li>
+                    <li onclick="highlightCompetence(this)">Supporting fairness</li>
+                    <li onclick="highlightCompetence(this)">Promoting nature</li>
+                    <li onclick="highlightCompetence(this)">Systems thinking</li>
+                    <li onclick="highlightCompetence(this)">Critical thinking</li>
+                    <li onclick="highlightCompetence(this)">Problem framing</li>
+                    <li onclick="highlightCompetence(this)">Futures literacy</li>
+                    <li onclick="highlightCompetence(this)">Adaptability</li>
+                    <li onclick="highlightCompetence(this)">Exploratory thinking</li>
+                    <li onclick="highlightCompetence(this)">Political agency</li>
+                    <li onclick="highlightCompetence(this)">Collective action</li>
+                    <li onclick="highlightCompetence(this)">Individual initiative</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="framework">
+            <h2>Lifecomp</h2>
+            <div class="competences">
+                <ul>
+                    <li onclick="highlightCompetence(this)">Self regulation</li>
+                    <li onclick="highlightCompetence(this)">Flexibility</li>
+                    <li onclick="highlightCompetence(this)">Well being</li>
+                    <li onclick="highlightCompetence(this)">Empathy</li>
+                    <li onclick="highlightCompetence(this)">Communication</li>
+                    <li onclick="highlightCompetence(this)">Collaboration</li>
+                    <li onclick="highlightCompetence(this)">Growth mind-set</li>
+                    <li onclick="highlightCompetence(this)">Critical thinking</li>
+                    <li onclick="highlightCompetence(this)">Managing learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedColor = '#d3e4cd'; // Default color
+
+        function selectColor(color) {
+            selectedColor = color;
+            document.querySelectorAll('.color-option').forEach(option => option.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        function highlightCompetence(element) {
+            element.style.backgroundColor = element.style.backgroundColor === selectedColor ? '' : selectedColor;
+        }
+		function resetHighlights() {
+    document.querySelectorAll('.competences li').forEach(item => {
+        item.style.backgroundColor = '';
+    });
+}
+    </script>
+
+</body>
+</html>
